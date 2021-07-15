@@ -25,14 +25,24 @@ sudo apt update || error "Failed to update apt packages"
 sudo apt install figlet lolcat
 figlet "Installing LXDE" | lolcat
 sudo apt install lxde
+echo "sleeping 5 seconds"
+sleep 5
 figlet "Installing arc-theme" | lolcat
 sudo apt install arc-theme
+echo "sleeping 5 seconds"
+sleep 5
 figlet "Installing papirus-icons" | lolcat
 sudo apt install papirus-icon-theme
+echo "sleeping 5 seconds"
+sleep 5
 figlet "Installing cursor" | lolcat
 sudo apt install breeze-cursor-theme
+echo "sleeping 5 seconds"
+sleep 5
 figlet "Installing xfce4-panel" | lolcat
 sudo apt install xfce4-panel
+echo "sleeping 5 seconds"
+sleep 5
 figlet "Installation has completed!" | lolcat
 echo "Please reboot now and do installation step two"
 
