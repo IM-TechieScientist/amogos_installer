@@ -9,4 +9,4 @@ read -n 1 -s -r -p "Press any key to continue"
 echo ""
 lxappearance
 
-figlet "Installation has completed!"
+figlet "Installation has completed!" | lolcat
