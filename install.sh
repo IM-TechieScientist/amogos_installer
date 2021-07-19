@@ -9,8 +9,8 @@ NC='\033[0m'
 clear
 
 #Printing Credits
-echo -e  "${GREEN}Welcome to AmogOS Installer(x86)"
-echo -e  "${GREEN}This will install AmogOS on your debian-based system"
+echo -e  "${GREEN}Welcome to the AmogOS Installer (x86_64)"
+echo -e  "${GREEN}This will install AmogOS on your Debian or Debian-based system"
 echo ""
 read -n 1 -s -r -p "Press any key to continue"
 echo ""
@@ -20,27 +20,46 @@ function error {
   exit 1
 }
 
+echo "Installing required packages..."
+echo " "
+
 sudo apt update || error "Failed to update apt packages"
 
-sudo apt install figlet lolcat
+# Wait for apt lock to be released
+i=0
+while sudo fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock > /dev/null 2>&1
+do
+  case $(($i % 4)) in
+    0) j="-";;
+    1) j="\\";;
+    2) j="|";;
+    3) j="/";;
+  esac
+  printf "\r[$j] Waiting for other APT instances to finish..."
+  sleep 0.5
+  ((i+=1))
+done
+[[ $i -gt 0 ]] && printf "Done.\n"
+
+sudo apt install -y figlet lolcat
 figlet "Installing LXDE" | lolcat
-sudo apt install lxde
+sudo apt install -y lxde
 echo "sleeping 5 seconds"
 sleep 5
 figlet "Installing arc-theme" | lolcat
-sudo apt install arc-theme
+sudo apt install -y arc-theme
 echo "sleeping 5 seconds"
 sleep 5
 figlet "Installing papirus-icons" | lolcat
-sudo apt install papirus-icon-theme
+sudo apt install -y papirus-icon-theme
 echo "sleeping 5 seconds"
 sleep 5
 figlet "Installing cursor" | lolcat
-sudo apt install breeze-cursor-theme
+sudo apt install -y breeze-cursor-theme
 echo "sleeping 5 seconds"
 sleep 5
 figlet "Installing xfce4-panel" | lolcat
-sudo apt install xfce4-panel
+sudo apt install -y xfce4-panel
 echo "sleeping 5 seconds"
 sleep 5
 figlet "Installation has completed!" | lolcat
