@@ -1,4 +1,7 @@
 figlet "Changing Wallpaper" | lolcat
+mkdir ~/Pictures/.amogOS
+mkdir ~/Pictures/.amogOS/Wallpapers
+cp ~/amogos_installer/wallpaper.png ~/Pictures/.amogOS/Wallpapers/wallpaper.png
 pcmanfm --set-wallpaper="/home/pi/amogos_installer/wallpaper.png"
 echo "There are more wallpapers available at /home/pi/Wallpapers"
 sleep 2
