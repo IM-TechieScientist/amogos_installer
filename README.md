@@ -1,9 +1,9 @@
 # amogos_installer
-This is a cli installer for Amog OS x86
-The script is supposed to be run on debian or debian-based systems
-AmogOS installer for x86 automatically installs LXDE , the arc-theme , papirus icons , cursors and xfce4-panel..changes wallpapers..allows you to choose which theme you prefer
+CLI installer for {AmogOS}(https://github.com/jostroOS/amogOS) x86_64
+The script is supposed to be run on Debian or Debian-based OSes like Ubuntu and Linux Mint
+The installer automatically installs LXDE, arc-theme, papirus icons, cursors and xfce4-panel..changes wallpapers..allows you to choose which theme you prefer
 
-Pictures: <br>
+Screenshots: <br>
 <img src="https://user-images.githubusercontent.com/84835176/125793821-bef3c323-1b26-4439-8b39-c5bed344239a.png">
 <img src="https://user-images.githubusercontent.com/84835176/125793907-19e1eb56-c16f-4d31-9730-f681d2093653.png">
 <img src="https://user-images.githubusercontent.com/84835176/125793948-a1555617-3d6b-4ed1-af9b-865b82784c71.png">
@@ -13,13 +13,13 @@ Pictures: <br>
 
 <br>
 
-Steps to install: <br>
-1)Make sure your Debian username is pi <br> 
-2)git clone "https://github.com/IM-TechieScientist/amogos_installer/" <br> 
-3)cd amogos_installer <br>
-4)bash install.sh <br>
-5)Let it finish <br>
-6)Once it's done..reboot..so the GUI comes up <br> 
-7)cd into amogos_installer again and do bash install1.sh <br>
-8)This will change Wallpaper and will launch lxappearance so you can choose what theme you prefer <br>
-9)That's it..Amog OS x86 is now installed
+Steps to install AmogOS: <br>
+1) Make sure your Debian username is pi <br> 
+2) `git clone https://github.com/IM-TechieScientist/amogos_installer/` <br> 
+3) `cd amogos_installer` <br>
+4) `bash install.sh` <br>
+5) Let it finish <br>
+6) Once it's done..reboot..and wait for it to boot to desktop <br> 
+7) `cd amogos_installer && bash install1.sh` <br>
+8) This will change the wallpaper and will launch lxappearance so you can choose what theme you prefer <br>
+9) That's it..AmogOS x86_64 is now installed
